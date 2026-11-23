@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { createRoot } from "react-dom/client";
+import { ConfigProvider } from "antd";
+import "antd/dist/reset.css";
+import "@fontsource-variable/vazirmatn";
+import "./assets/styles/main.scss";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+import App from "./App";
+import { antdTheme } from "./theme/antdTheme";
+
+createRoot(document.getElementById("root")!).render(
+  <ConfigProvider theme={antdTheme}  direction="rtl">
     <App />
-  </StrictMode>,
-)
+  </ConfigProvider>,
+);

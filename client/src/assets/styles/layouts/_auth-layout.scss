@@ -1,0 +1,40 @@
+.auth-layout {
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100dvh;
+
+    .auth-layout__brand {
+        border: 1px solid red;
+        padding-inline: 3rem;
+        padding-block-start: 5rem;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 0.875rem;
+            color: rgb(150, 147, 147);
+        }
+    }
+
+    .auth-layout__main {
+        border: 1px solid red;
+        display: grid;
+        place-items: center;
+        padding-inline: 1.5rem;
+    }
+
+    .auth-layout__card {
+        background-color: #101c18;
+        outline: 1px solid deepskyblue;
+        width: 100%;
+        max-width: 27.5rem;
+        padding-block: 2rem;
+        padding-inline: 2rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 1rem 3rem rgb(0 0 0 / 35%);
+    }
+}

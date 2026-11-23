@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as vars;
+
+body {
+  margin: 0;
+  background-color: vars.$color-bg;
+  color: vars.$color-text;
+  font-family: "Vazirmatn Variable", sans-serif;
+}
+
+
