@@ -1,40 +1,128 @@
 .auth-layout {
-    border: 1px solid red;
+    min-height: 100dvh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 100dvh;
+    direction: ltr;
+    background-image: url("../../images/auth-background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     .auth-layout__brand {
-        border: 1px solid red;
         padding-inline: 3rem;
-        padding-block-start: 5rem;
+        padding-block-start: 3.5rem;
 
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
+        .auth-brand__logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            h2 {
+                color: #f4f7f7;
+                font-size: 2rem;
+                font-weight: 700;
+                margin: 0;
+                line-height: 1;
+
+                span {
+                    color: #16c9a5;
+                }
+            }
         }
 
-        p {
-            font-size: 0.875rem;
-            color: rgb(150, 147, 147);
+        .auth-brand__content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 7rem;
+
+            h1 {
+                color: #f4f7f7;
+                font-size: 3rem;
+                font-weight: 700;
+                margin: 0;
+                line-height: 1.15;
+
+                span {
+                    display: block;
+                    color: #16c9a5;
+                }
+            }
+
+            p {
+                color: #899096;
+                font-size: 0.8rem;
+                line-height: 1.8;
+            }
         }
     }
 
     .auth-layout__main {
-        border: 1px solid red;
         display: grid;
         place-items: center;
         padding-inline: 1.5rem;
     }
 
-    .auth-layout__card {
-        background-color: #101c18;
-        outline: 1px solid deepskyblue;
-        width: 100%;
-        max-width: 27.5rem;
-        padding-block: 2rem;
-        padding-inline: 2rem;
-        border-radius: 1.5rem;
-        box-shadow: 0 1rem 3rem rgb(0 0 0 / 35%);
+.auth-layout__card {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    max-width: 27.5rem;
+    padding: 2rem;
+
+    border: 1px solid transparent;
+    border-radius: 1.5rem;
+
+    background:
+        radial-gradient(
+            ellipse at top left,
+            rgb(22 201 165 / 12%),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at bottom right,
+            rgb(22 201 165 / 10%),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #101c18,
+            #081310
+        ) padding-box,
+        linear-gradient(
+            135deg,
+            #16c9a5 0%,
+            #263b35 35%,
+            #050b09 65%,
+            #16c9a5 100%
+        ) border-box;
+
+    box-shadow:
+        0 1rem 3rem rgb(0 0 0 / 45%),
+        0 0 1.5rem rgb(22 201 165 / 10%),
+        inset 0 1px 0 rgb(255 255 255 / 4%);
+}
+}
+
+@media (max-width: 768px) {
+
+    .auth-layout {
+        grid-template-columns: 1fr;
+        min-height: 100dvh;
+
+        .auth-layout__brand {
+            display: none;
+        }
+
+        .auth-layout__main {
+            width: 100%;
+            min-height: 100dvh;
+            padding: 1.5rem;
+        }
+
+        .auth-layout__card {
+            max-width: 27.5rem;
+            padding: 1.75rem;
+        }
     }
 }
