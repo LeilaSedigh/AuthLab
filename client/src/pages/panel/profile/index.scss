@@ -140,13 +140,11 @@
         }
     }
 }
-
 @media (max-width: 576px) {
     .profile {
         &__card {
             padding: 1.25rem;
         }
-
         &__user {
             flex-wrap: wrap;
         }
